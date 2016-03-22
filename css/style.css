@@ -1,0 +1,511 @@
+/*----------------------------------------------
+
+    Developed by Octavian Mos 2015
+    octavianhd@gmail.com
+
+-----------------------------------------------*/
+/*----------------------------------------------
+
+    Table of content:
+
+    #Main;
+    #Header;
+    #Navigation;
+    #About me section;
+    #Services section;
+    #My work section
+    #Contact section;
+    #Pager Div;
+    #Footer;
+    #Scroll Up;
+    #Responsive.
+    
+-----------------------------------------------*/
+
+/*---------------------------Main-----------------------------*/
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: "OpenSans",sans-serif;
+	font-size: normal;
+	margin: 0;
+}
+section{
+	padding: 100px 0;
+}
+p{
+	text-indent: 0;
+}
+ul{
+	padding: 0;
+	margin-bottom: 0;
+	list-style-type: none;
+}
+a,button {
+	transition: 0.4s ease-in-out;
+	-moz-transition: 0.4s ease-in-out;
+	-webkit-transition: 0.4s ease-in-out;
+}
+a:hover,a:focus{
+	text-decoration: none;
+}
+.title-separator{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 16px;
+	font-weight: 500;
+}
+.wide{
+	line-height: 44px;
+}
+/*-------------------Header------------------------------*/
+
+header{
+	width: 100%;
+	height: 768px;
+	background-image: url(../pics/Masking-img.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: "OpenSans",sans-serif;
+	text-align: center;
+	color: #fff;
+
+}
+header h1{
+	padding: 0;
+	font-size:80px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	text-shadow: 1px 1px 2px #000;
+}
+header h2{
+	padding-top: 200px; 
+	text-shadow: 1px 1px 2px #000;
+}
+header h3{
+	font-size: 24px;
+	text-shadow: 1px 1px 2px #000;
+}
+.main-btn{
+	font-size: 16px;
+	font-weight: 600;
+	background-color: yellow;
+	text-transform: uppercase;
+	color: #000;
+	letter-spacing: 3px;
+	padding: 10px 30px;
+	margin-top: 80px;
+}
+.main-btn:hover{
+	background-color: #fff;
+	text-shadow:2px 2px 4px #888888;
+	box-shadow: 2px 2px 4px #000;
+}
+
+/*------------------------------Navigation----------------------------*/
+#topNav{
+	background-color: #02918c;
+	width: 100%;
+	height: 70px;
+}
+.logo{
+	padding: 20px 20px;
+	font-size: 24px;
+	font-weight: 800;
+	color: #fff;
+	text-transform: uppercase;
+}
+.logo span{
+	color: yellow;
+}
+.logo:hover{
+	color: yellow;
+}
+.navi ul{
+	padding: 50px 0;
+
+}
+.navi li{
+	padding: 20px 20px;
+}
+.navi li a{
+	font-family: "OpenSans",sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	color: #fff;
+	text-decoration: none;
+}
+.navi li a:hover{
+	color: #016561;
+	/*text-shadow: 1px 1px 3px #000;*/
+}
+
+/*--------------------------------About me section-------------------------*/
+
+#about{
+	width: 100%;
+	/*height: 700px;*/
+	color: #7e8287;
+	text-align: center;
+}
+#about h2{
+	font-size: 44px;
+	color: #02918c;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+}
+#about span{
+	font-size: 24px;
+	font-weight: 600;
+}
+#about .row{
+	margin: 100px 80px 0 80px;
+	font-size: 12px;
+}
+#about .col-md-3{
+	padding: 40px 0;
+	border-right: 1px solid #5e6767;
+}
+#about .col-md-3:last-child{
+	border: none;
+}
+#about .col-md-3 h4{
+	padding: 20px 0;
+}
+/*.divider{
+	height: 250px;
+	width: 1px;
+	border: 0.25px solid #5e6767;
+	color:;
+}*/
+
+/*-------------------------------Services section------------------------*/
+
+#services{
+	/*width: 100%;*/
+	/*height: 700px;*/
+	background-image: url(../pics/services-img.jpg);
+	background-repeat: no-repeat;
+	background-size:100%;
+	color: #7e8287;
+}
+#services h2{
+	padding-left: 50px;
+	font-size: 44px;
+	color: #02918c;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+#subtitle{
+	padding-left: 50px;
+}
+#services .col-md-3{
+	padding-left: 50px;
+	font-size: 12px;
+	text-align: left;
+}
+
+/*----------------------------------My work section---------------------*/
+
+#work{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 800px;
+	text-align: center;
+}
+#work h2{
+	font-size: 44px;
+	color: #02918c;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+}
+#work h4{
+	padding-bottom: 40px;
+}
+#work .col-md-3{
+	margin: 0;
+	padding: 0;
+}
+#work img{
+	width: 100%;
+}
+.showDiv{
+	margin: 0;
+	padding: 0;
+	/*width: 320px;
+	height: 238px;*/
+	position: relative;
+	float: left;
+	/*overflow: hidden;*/
+}
+.hidingDiv{
+	display: none;
+	width: 80%;
+	height: 80%;
+	margin-left: 10%;
+	margin-top: 7%;
+	position: absolute;
+	background-color: rgba(2,145,140,0.7);
+	/*padding-top: 40px;*/
+	font-size: 12px;
+	color: #fff;
+	text-align: center;
+	/*visibility: hidden;*/
+	z-index: 100;
+}
+.hidingDiv h4{
+	padding-top: 20px;
+	color: #fff;
+}
+.hidingDiv p{
+	padding-top: 0;
+	/*padding-bottom: 60px;*/
+}
+
+/*--------------------------------Contact section---------------------*/
+
+#contact{
+	position: relative;
+	width: 100%;
+	/*height: 300px;*/
+	text-align: center;
+}
+#contact h2{
+	font-size: 44px;
+	color: #02918c;
+	font-weight: 800;
+	text-align: center;
+	text-transform: uppercase;
+}
+#contact-form{
+	width: 100%;
+	/*height: 600px;*/
+	background-color: #0c0d0d;
+}
+.form-group{
+	width: 80%;
+	padding-left: 20%;
+	
+}
+#contact textarea{
+	width: 100%;
+	
+}
+#contact-form input, #contact-form textarea{
+	padding: 30px 0;
+	font-size: 16px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: none;
+	text-align: center;
+}
+
+#contact-form button{
+	margin-top: 50px;
+	margin-left: 40%;
+	padding: 15px 50px;
+	background-color: yellow;
+	color: #000;
+	font-size: 16px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-align: center;
+}
+#contact-form button:hover{
+	background-color: #fff;
+	text-shadow:2px 2px 4px #888888;
+	box-shadow: 3px 3px 5px #888888,2px 2px 4px #000;
+}
+
+/*-------------------------------Footer-------------------------------*/
+
+footer {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+}
+
+footer p{
+	padding: 10px;
+	color: #fff
+}
+
+/*-------------------------Pager Div-------------------------*/
+
+/*#pagerDiv li a{
+	background-color: #666633;
+	color: #fff;
+}
+#pagerDiv li a:hover{
+	background-color: #949470;
+	box-shadow: 5px 5px 10px #888888;
+}*/
+
+/*-----------------------Scroll Up------------------------*/
+
+#scrollUp {
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	background: url(../pics/top.png) no-repeat;
+	opacity: .5;
+}
+#scrollUp:hover {
+	opacity: 1;
+}
+/*#scrollUp {
+    bottom: 20px;
+    right: 20px;
+    padding: 20px 30px;
+    background-color: #555;
+    color: #fff;
+}*/
+
+
+/*-------------------------Responsive------------------------*/
+
+@media(max-width: 1200px){
+	#services{
+		background-image: none;
+	}
+}
+@media(max-width: 992px){
+	section{
+		margin: 0;
+		padding: 20px 0;
+	}
+	#about{
+		margin: 0;
+	}
+	#about .col-md-3{
+		border: none;
+	}
+	#services, #subtitle{
+		border: none;
+		padding-left: 0;
+	}
+}
+@media(max-width: 768px){
+	header{
+		height: 450px;
+	}
+	header h1{
+		font-size: 24px;
+		font-weight: 600;
+		padding: 10px 0;
+		text-shadow: 2px 2px 4px #888888,1px 1px 3px black;
+	}
+	header h2{
+		padding-top: 50px;
+		font-size: 18px;
+	}
+	header h3{
+		font-size: 16px;
+	}
+	.title-separator{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		font-size: 12px;
+		font-weight: 400;
+		text-align: left;
+	}
+	.wide{
+		line-height: normal;
+	}
+	.navi{
+		margin-top: 10px;
+		position: relative;
+		background-color: #016561;
+		width: 100%;
+		text-align: left;
+	}
+	.navi li{
+		display: block;
+		padding: 10px 20px;
+		border-bottom: 1px solid #001918;
+	}
+	.navi li a{
+		display: block;
+	}
+	.navi li a:hover{
+		background-color: #02b0aa;
+		color: #fff;
+	}
+	.navbar-toggle{
+		height: 50px;
+		background-color: #e5e600;
+		padding: 0 15px;
+		border-radius: 5px;
+	}
+	.icon-bar{
+		background-color: #000;
+	}
+	.logo{
+		padding: 0;
+		font-size: 24px;
+	}
+	.main-btn{
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+		padding: 10px 20px;
+		margin-top: 50px;
+	}
+	#about, #work, #services, #contact, footer{
+		position: relative;
+		display: flex;
+		font-size: 12px;
+	}
+	#about{
+		margin: 0;
+		padding: 0;
+	}
+	#about span{
+		font-size: 16px;
+		font-weight: 500;
+	}
+	#about .row{
+		margin: 0;
+		padding: 0;
+		/*font-size: 10px;*/
+	}
+	#about .col-md-3{
+		margin: 0;
+		padding: 0;
+	}
+	#about .col-md-3 h4{
+		padding: 0;
+	}
+	#services h4, #about h4, #work h4, #contact h4{
+		font-size: 14px;
+	}
+	#services{
+		padding: 0;
+	}
+	#services h2{
+		padding-left: 0;
+	}
+	#work h4{
+		padding-bottom: 0;
+	}
+	.hidingDiv{	
+		font-size: 8px;
+	}
+	.hidingDiv h4{
+		padding-top: 5px;
+	}
+	#contact{
+		margin: 0;
+		padding: 0;
+	}
+	#contact-form button{
+		margin-left: 10%;
+	}
+}
